@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 110" width="100%" height="100%">
+  <defs>
+    <linearGradient id="truckGradLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284C7" />
+      <stop offset="100%" stop-color="#38BDF8" />
+    </linearGradient>
+    <linearGradient id="goldGradLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FBBF24" />
+      <stop offset="100%" stop-color="#F59E0B" />
+    </linearGradient>
+  </defs>
+
+  <!-- Truck / Vacuum Emblem Shield -->
+  <g transform="translate(10, 10)">
+    <!-- Hexagon / Badge Background -->
+    <path d="M45,0 L80,20 L80,68 L45,88 L10,68 L10,20 Z" fill="#0F2444" stroke="#0284C7" stroke-width="2" />
+    
+    <!-- Accent Ring -->
+    <path d="M45,4 L76,22 L76,65 L45,84 L14,65 L14,22 Z" fill="none" stroke="url(#goldGradLight)" stroke-width="2.5" stroke-dasharray="8 3" />
+
+    <!-- Vacuum Truck Silhouette Inside -->
+    <path d="M26,35 L44,35 L48,46 L58,46 L58,62 L26,62 Z" fill="#FFFFFF" />
+    <path d="M30,39 L42,39 L45,47 L30,47 Z" fill="#0284C7" />
+    <path d="M49,38 Q66,38 66,50 Q66,62 49,62 Z" fill="url(#goldGradLight)" />
+    <path d="M38,32 C55,26 68,36 68,44" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" />
+    <circle cx="34" cy="62" r="6" fill="#0A192F" stroke="#38BDF8" stroke-width="2" />
+    <circle cx="56" cy="62" r="6" fill="#0A192F" stroke="#38BDF8" stroke-width="2" />
+    <circle cx="34" cy="62" r="2" fill="url(#goldGradLight)" />
+    <circle cx="56" cy="62" r="2" fill="url(#goldGradLight)" />
+    <path d="M66,42 Q74,44 76,50" fill="none" stroke="#38BDF8" stroke-width="2" stroke-linecap="round" />
+  </g>
+
+  <!-- Typography -->
+  <g transform="translate(105, 20)">
+    <text x="0" y="36" font-family="'Plus Jakarta Sans', 'Arial Black', sans-serif" font-weight="900" font-size="34" fill="#FFFFFF" letter-spacing="1">
+      SERKAN
+    </text>
+    <text x="145" y="36" font-family="'Plus Jakarta Sans', 'Arial Black', sans-serif" font-weight="900" font-size="34" fill="#38BDF8" letter-spacing="1">
+      VİDANJÖR
+    </text>
+
+    <!-- Subtitle Bar -->
+    <rect x="0" y="47" width="365" height="20" rx="4" fill="#0284C7" />
+    <text x="8" y="61" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="10.5" fill="#FFFFFF" letter-spacing="1.2">
+      7/24 ALTYAPI &amp; KANAL AÇMA • TÜM AVRUPA YAKASI
+    </text>
+  </g>
+</svg>

@@ -1,0 +1,377 @@
+/* ==========================================================================
+   SERKAN VİDANJÖR - Kurumsal Stil Dosyası
+   Merkezi Renk Sistemi: Monokromatik Koyu Lacivert Ailesi
+   --color-primary:        #0B1F33 (Ana Renk)
+   --color-primary-dark:   #071522 (Koyu Ton)
+   --color-primary-medium: #163A5F (Orta Ton)
+   --color-primary-light:  #DCE8F2 (Açık Ton)
+   --color-background:     #F4F7FA (Çok Açık Arka Plan)
+   --color-white:          #FFFFFF (Beyaz)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --color-primary: #0B1F33;
+  --color-primary-dark: #071522;
+  --color-primary-medium: #163A5F;
+  --color-primary-light: #DCE8F2;
+  --color-background: #F4F7FA;
+  --color-white: #FFFFFF;
+
+  /* Yardımcı Nötrler */
+  --color-slate-100: #EBF1F6;
+  --color-slate-200: #DCE8F2;
+  --color-slate-600: #4A5D6E;
+  --color-slate-800: #1A2E40;
+
+  --touch-target-min: 44px;
+}
+
+html.dark {
+  --color-primary: #0B1F33;
+  --color-primary-dark: #040D16;
+  --color-primary-medium: #163A5F;
+  --color-primary-light: #DCE8F2;
+  --color-background: #071522;
+  --color-surface-card: #0B1F33;
+  --color-surface-border: #163A5F;
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #DCE8F2;
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-primary-medium);
+  outline-offset: 2px;
+}
+
+html.dark :focus-visible {
+  outline-color: var(--color-primary-light);
+}
+
+.touch-target-min {
+  min-width: var(--touch-target-min);
+  min-height: var(--touch-target-min);
+}
+
+html, body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: var(--color-primary);
+  background-color: var(--color-white);
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
+}
+
+button, input, select, textarea, h1, h2, h3, h4, h5, h6, p, a, span {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+.max-w-7xl {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  width: 100%;
+}
+
+/* ==========================================================================
+   Kurumsal Animasyonlar & Efektler (Sade & Asil)
+   ========================================================================== */
+
+@keyframes pulse-ring-corporate {
+  0% {
+    transform: scale(0.97);
+    box-shadow: 0 0 0 0 rgba(22, 58, 95, 0.45);
+  }
+  70% {
+    transform: scale(1.02);
+    box-shadow: 0 0 0 14px rgba(22, 58, 95, 0);
+  }
+  100% {
+    transform: scale(0.97);
+    box-shadow: 0 0 0 0 rgba(22, 58, 95, 0);
+  }
+}
+
+@keyframes phone-shake {
+  0%, 100% { transform: rotate(0deg); }
+  10%, 30%, 50%, 70%, 90% { transform: rotate(-8deg); }
+  20%, 40%, 60%, 80% { transform: rotate(8deg); }
+}
+
+@keyframes badge-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+/* Tüm pulse çağrıları tek kurumsal lacivert dalgasına bağlandı */
+.animate-pulse-corporate,
+.animate-pulse-yellow,
+.animate-pulse-blue,
+.animate-pulse-green {
+  animation: pulse-ring-corporate 2.5s infinite cubic-bezier(0.4, 0, 0.6, 1);
+}
+
+.animate-phone {
+  animation: phone-shake 3s infinite;
+  display: inline-block;
+}
+
+.badge-float {
+  animation: badge-bounce 3s infinite ease-in-out;
+}
+
+/* ==========================================================================
+   Kartlar & Hover Durumları (Kurumsal Standart)
+   ========================================================================== */
+
+.service-card {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  border-radius: 1rem;
+  overflow: hidden;
+  background: var(--color-white);
+  border: 1px solid var(--color-primary-light);
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 28px -10px rgba(7, 21, 34, 0.14), 0 8px 12px -5px rgba(22, 58, 95, 0.08);
+  border-color: var(--color-primary-medium);
+}
+
+.service-card:hover .service-img {
+  transform: scale(1.05);
+}
+
+.service-img {
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.district-badge {
+  transition: all 0.2s ease-in-out;
+  border: 1px solid var(--color-primary-light);
+}
+
+.district-badge:hover {
+  transform: translateY(-2px);
+  background-color: var(--color-primary) !important;
+  color: var(--color-white) !important;
+  border-color: var(--color-primary-medium) !important;
+}
+
+.district-badge:hover i {
+  color: var(--color-primary-light) !important;
+}
+
+/* ==========================================================================
+   Hero Bölümü Gradient & Overlay (Yalnızca Lacivert Tonları)
+   ========================================================================== */
+
+.hero-overlay {
+  background: linear-gradient(
+    90deg,
+    rgba(7, 21, 34, 0.96) 0%,
+    rgba(11, 31, 51, 0.88) 50%,
+    rgba(22, 58, 95, 0.45) 100%
+  );
+}
+
+@media (max-width: 768px) {
+  .hero-overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(7, 21, 34, 0.95) 0%,
+      rgba(11, 31, 51, 0.88) 60%,
+      rgba(7, 21, 34, 0.97) 100%
+    );
+  }
+}
+
+/* ==========================================================================
+   Footer Arka Planı (Yalnızca #071522 -> #0B1F33 -> #163A5F)
+   ========================================================================== */
+
+.footer-bg {
+  background: radial-gradient(circle at 10% 20%, #163A5F 0%, #0B1F33 65%, #071522 100%);
+}
+
+/* ==========================================================================
+   Floating Action Butonları & Alt Sabit Bar
+   ========================================================================== */
+
+.floating-btn {
+  box-shadow: 0 10px 25px -5px rgba(7, 21, 34, 0.35);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: 1px solid var(--color-primary-medium);
+}
+
+.floating-btn:hover {
+  transform: scale(1.08);
+  background-color: var(--color-primary-medium);
+}
+
+/* Scroll To Top */
+#scrollTopBtn {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.2s ease;
+  background-color: var(--color-primary-medium);
+  color: var(--color-white);
+}
+
+#scrollTopBtn.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+#scrollTopBtn:hover {
+  background-color: var(--color-primary);
+}
+
+/* Mobil Alt Sabit Çağrı Çubuğu */
+.mobile-call-bar {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-call-bar {
+    display: flex;
+  }
+  body {
+    padding-bottom: 72px;
+  }
+}
+
+/* ==========================================================================
+   Dark Mode (Gece Teması - Kurumsal Lacivert Tonları)
+   ========================================================================== */
+
+html.dark {
+  color-scheme: dark;
+}
+
+html.dark body {
+  background-color: #071522;
+  color: #F4F7FA;
+}
+
+html.dark .bg-white {
+  background-color: #0B1F33 !important;
+}
+
+html.dark .bg-slate-50,
+html.dark .bg-\[\#F4F7FA\] {
+  background-color: #071522 !important;
+}
+
+html.dark .text-brandNavy,
+html.dark .text-\[\#0B1F33\] {
+  color: #FFFFFF !important;
+}
+
+html.dark .text-slate-800 {
+  color: #F4F7FA !important;
+}
+
+html.dark .text-slate-700 {
+  color: #DCE8F2 !important;
+}
+
+html.dark .text-slate-600 {
+  color: #BACDDD !important;
+}
+
+html.dark .text-slate-500 {
+  color: #8CA4BA !important;
+}
+
+html.dark .border-slate-100,
+html.dark .border-slate-200,
+html.dark .border-slate-300,
+html.dark .border-\[\#DCE8F2\] {
+  border-color: #163A5F !important;
+}
+
+html.dark header {
+  background-color: rgba(7, 21, 34, 0.96) !important;
+  border-bottom-color: #163A5F !important;
+}
+
+html.dark header nav a {
+  color: #DCE8F2 !important;
+}
+
+html.dark header nav a:hover {
+  color: #FFFFFF !important;
+}
+
+html.dark .service-card {
+  background: #0B1F33 !important;
+  border-color: #163A5F !important;
+}
+
+html.dark .service-card:hover {
+  border-color: #DCE8F2 !important;
+  box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.6);
+}
+
+html.dark .district-badge {
+  background-color: #0B1F33 !important;
+  border-color: #163A5F !important;
+  color: #FFFFFF !important;
+}
+
+html.dark .district-badge:hover {
+  background-color: #163A5F !important;
+  border-color: #DCE8F2 !important;
+  color: #FFFFFF !important;
+}
+
+html.dark input,
+html.dark select,
+html.dark textarea {
+  background-color: #071522 !important;
+  border-color: #163A5F !important;
+  color: #FFFFFF !important;
+}
+
+html.dark input::placeholder,
+html.dark textarea::placeholder {
+  color: #8CA4BA !important;
+}
+
+html.dark #formSuccessModal > div {
+  background-color: #0B1F33 !important;
+  border: 1px solid #163A5F !important;
+}
+
+/* ==========================================================================
+   KURUMSAL REFERANSLAR MARQUEE (KAYAR BANT)
+   ========================================================================== */
+@keyframes marquee {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 25s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation-duration: 60s;
+  }
+}

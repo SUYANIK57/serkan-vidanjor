@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 110" width="100%" height="100%">
+  <defs>
+    <linearGradient id="truckGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284C7" />
+      <stop offset="100%" stop-color="#0A192F" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+    <filter id="dropShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.15" />
+    </filter>
+  </defs>
+
+  <!-- Truck / Vacuum Emblem Shield -->
+  <g transform="translate(10, 10)">
+    <!-- Hexagon / Badge Background -->
+    <path d="M45,0 L80,20 L80,68 L45,88 L10,68 L10,20 Z" fill="url(#truckGrad)" filter="url(#dropShadow)" />
+    
+    <!-- Accent Ring -->
+    <path d="M45,4 L76,22 L76,65 L45,84 L14,65 L14,22 Z" fill="none" stroke="url(#goldGrad)" stroke-width="2.5" stroke-dasharray="8 3" />
+
+    <!-- Vacuum Truck Silhouette Inside -->
+    <!-- Cabin -->
+    <path d="M26,35 L44,35 L48,46 L58,46 L58,62 L26,62 Z" fill="#FFFFFF" />
+    <!-- Cabin Window -->
+    <path d="M30,39 L42,39 L45,47 L30,47 Z" fill="#0284C7" />
+    <!-- Tanker Tank -->
+    <path d="M49,38 Q66,38 66,50 Q66,62 49,62 Z" fill="url(#goldGrad)" />
+    <!-- Vacuum Hose Ring -->
+    <path d="M38,32 C55,26 68,36 68,44" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" />
+    <!-- Wheels -->
+    <circle cx="34" cy="62" r="6" fill="#0A192F" stroke="#FFFFFF" stroke-width="2" />
+    <circle cx="56" cy="62" r="6" fill="#0A192F" stroke="#FFFFFF" stroke-width="2" />
+    <circle cx="34" cy="62" r="2" fill="url(#goldGrad)" />
+    <circle cx="56" cy="62" r="2" fill="url(#goldGrad)" />
+
+    <!-- Water Stream / Suction Wave -->
+    <path d="M66,42 Q74,44 76,50" fill="none" stroke="#38BDF8" stroke-width="2" stroke-linecap="round" />
+  </g>
+
+  <!-- Typography -->
+  <g transform="translate(105, 20)">
+    <!-- SERKAN -->
+    <text x="0" y="36" font-family="'Plus Jakarta Sans', 'Arial Black', sans-serif" font-weight="900" font-size="34" fill="#0A192F" letter-spacing="1">
+      SERKAN
+    </text>
+    
+    <!-- VİDANJÖR -->
+    <text x="145" y="36" font-family="'Plus Jakarta Sans', 'Arial Black', sans-serif" font-weight="900" font-size="34" fill="#0284C7" letter-spacing="1">
+      VİDANJÖR
+    </text>
+
+    <!-- Subtitle Bar -->
+    <rect x="0" y="47" width="365" height="20" rx="4" fill="#0A192F" />
+    <text x="8" y="61" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="10.5" fill="#F59E0B" letter-spacing="1.2">
+      7/24 ALTYAPI &amp; KANAL AÇMA • TÜM AVRUPA YAKASI
+    </text>
+  </g>
+</svg>
